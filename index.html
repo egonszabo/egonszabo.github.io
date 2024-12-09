@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szabó Egon Imre - Junior Software Tester</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General Styles */
+        body {
+            font-family: Consolas, monospace;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #121212;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .header .details {
+            flex: 1;
+        }
+
+        .header .details h1 {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .header .details p {
+            margin: 5px 0;
+            color: #bbb;
+        }
+
+        .header img {
+            max-width: 100px; /* Limits width */
+            max-height: 100px; /* Limits height */
+            object-fit: cover; /* Prevents stretching */
+            border-radius: 6px; /* Keeps the rounded corners */
+            transform: scale(1.4);
+            margin-right: 20px
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #fff;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .job, .education-item, .skill-item {
+            margin-bottom: 15px;
+            background-color: #1f1f1f;
+            padding: 10px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover Effects for Desktop */
+        @media (hover: hover) {
+            .job:hover, .education-item:hover, .skill-item:hover {
+                background-color: #333;
+            }
+        }
+
+        .job h3, .education-item h3 {
+            margin: 0 0 5px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        /* Tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .tag {
+            background-color: #333;
+            color: #bbb;
+            border-radius: 3px;
+            padding: 3px 6px;
+            font-size: 12px;
+            margin: 2px;
+        }
+
+        /* Fade In Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        .responsive {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 600px) {
+            .responsive {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .header img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .header .details h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 599px) {
+            .header {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center align items */
+                text-align: center; /* Center the text */
+            }
+
+            .header img {
+                margin: 0 0 15px 0; /* Add spacing below the image */
+                width: 80px; /* Adjust image size */
+                height: 80px; /* Keep it proportional */
+                transform: scale(1); /* Reset scaling */
+            }
+
+            .header .details h1 {
+                font-size: 20px; /* Adjust font size for better fit */
+            }
+
+            .header .details p {
+                font-size: 14px; /* Reduce text size slightly */
+                line-height: 1.4; /* Adjust spacing for readability */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header responsive">
+            <div class="details">
+                <h1>Szabó Egon Imre</h1>
+                <p>Junior Software Tester, 20</p>
+                <p>📍 Budapest, Hungary</p>
+                <p>🗣️ Near-native English</p>
+                <p>💼 Available for both in-office and remote work</p>
+            </div>
+            <img src="1.jpeg" alt="Profile Picture">
+        </div>
+
+        <div class="section about">
+            <h2>About</h2>
+            <p>
+                Enthusiastic Junior Software Tester with a passion for cybersecurity and AI technologies. Skilled in exploratory testing and developing comprehensive test cases.
+            </p>
+        </div>
+
+        <div class="section work-experience">
+            <h2>Work Experience</h2>
+            <div class="job">
+                <h3>Website Developer</h3>
+                <p>Freelance | 2021 - Present</p>
+                <p>Developed web applications and Progressive Web Apps (PWAs) focused on privacy and security. Designed and built websites for various businesses, enhancing their online presence and functionality.</p>
+                <div class="tags">
+                    <span class="tag">Web Development</span>
+                    <span class="tag">PWA</span>
+                    <span class="tag">Privacy</span>
+                    <span class="tag">Security</span>
+                    <span class="tag">Responsive Design</span>
+                    <span class="tag">Business Websites</span>
+                </div>
+            </div>
+            <div class="job">
+                <h3>QA Tester Intern</h3>
+                <p>Freelance | 2021 - 2023</p>
+                <p>Tested websites and various games independently, created detailed test cases and mindmaps. Specialized in exploratory testing to identify and resolve issues effectively.</p>
+                <div class="tags">
+                    <span class="tag">Manual Testing</span>
+                    <span class="tag">Exploratory Testing</span>
+                    <span class="tag">Test Case Creation</span>
+                    <span class="tag">Mindmaps</span>
+                    <span class="tag">Clockify</span>
+                    <span class="tag">Trello</span>
+                    <span class="tag">TestRail</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>TesterLab Manual Testing Course</h3>
+                <p>Completed in 2024 | Certification in Manual Testing</p>
+            </div>
+            <div class="education-item">
+                <h3>Zöld Kakas Líceum Mentálhigiénés Szakgimnázium, Gimnázium és Általános Iskola</h3>
+                <p>Budapest, Hungary | High School Diploma in English and Sustainability</p>
+            </div>
+            <div class="education-item">
+                <h3>Hegedüs Géza Általános Iskola</h3>
+                <p>Budapest, Hungary | Completed Primary Education</p>
+            </div>
+        </div>
+
+        <div class="section skills">
+            <h2>Skills</h2>
+            <div class="skill-item">
+                <p><strong>Technical Skills:</strong> Manual Testing, API Testing, Bug Reporting, Selenium, JIRA, Postman, Cybersecurity Basics, AI Prompt Engineering, Windows Troubleshooting, Windows System Maintenance</p>
+            </div>
+            <div class="skill-item">
+                <p><strong>Soft Skills:</strong> Problem Solving, Attention to Detail, Communication, Team Collaboration, Extroversion with Introverted Balance</p>
+            </div>
+            <div class="skill-item">
+                <p><strong>Additional Skills:</strong> Understanding of Code, Social Media Dynamics, Software Development with AI, Clockify, Trello, TestRail, Exploratory Testing</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
